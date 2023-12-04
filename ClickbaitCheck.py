@@ -1,7 +1,12 @@
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OPENAPI_KEY = os.getenv("OPENAI_KEY")
 
 headers = {
-    'Authorization': 'Bearer INSERT_YOUR_API_KEY_HERE',
+    'Authorization': f'Bearer {OPENAPI_KEY}',
     'Content-Type': 'application/json',
 }
 
